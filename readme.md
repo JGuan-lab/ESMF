@@ -24,7 +24,7 @@ esmf_codes_organized/
 
 ## Module Descriptions
 
-### `01_algorithms_and_utilities/` — Core algorithms & utilities (6)
+### `01_algorithms_and_utilities/` — Core algorithms & utilities
 The deconvolution engine and shared helper functions, called by every other script.
 - `esmf_deconvolution.R` — Core ESMF algorithm (NMF-based cell-proportion deconvolution)
 - `bulk_deconvolution.R` — Orchestrator (`deconv_lsc`) that dispatches the project's deconvolution methods (see source for the full supported list)
@@ -33,7 +33,7 @@ The deconvolution engine and shared helper functions, called by every other scri
 - `normalize_col_in_matrix.R` — Column-normalization utility for matrices
 - `cibersort.R` — Third-party CIBERSORT method (v1.03)
 
-### `02_benchmark_scenarios/` — Benchmark scenarios (23)
+### `02_benchmark_scenarios/` — Benchmark scenarios
 Drivers for the paper's **3 scenario classes × multiple tissues** benchmark. Each script embeds the full pipeline: data loading → QC → marker selection → pseudo-bulk → multi-method evaluation → result saving.
 - **Methods compared (13 in total)**: the proposed **ESMF** plus 10 bulk methods (`nnls`, `FARDEEP`, `RLR`, `DCQ`, `elastic_net`, `lasso`, `ridge`, `OLS`, `EPIC`, `DSA`) and 2 scRNA-seq methods (`MuSiC`, `CIBERSORTx`). The bulk set is defined by `methods_to_use` in each script; the two scRNA-seq methods are evaluated separately.
 - **Cross-platform / database consistency**: `crossPlatformConsistency_*`
@@ -42,10 +42,10 @@ Drivers for the paper's **3 scenario classes × multiple tissues** benchmark. Ea
 - Extended-cell-type variants: `*_Mm_Hypothalamus_6CT.R`, `*_Mm_Hypothalamus_7CT.R`
 - Clinical validation: `clinical_validation_with_flow_cytometry.R` (real whole-blood RNA-seq + flow-cytometry ground truth)
 
-### `03_ablation_study/` — Ablation study (10)
+### `03_ablation_study/` — Ablation study
 Module ablations (regularization, prior, literature, etc.) and parameter-sensitivity analyses for each benchmark scenario.
 
-### `04_expression_shift_e4/` — E4 expression-shift experiment (9)
+### `04_expression_shift_e4/` — E4 expression-shift experiment
 Evaluates ESMF robustness under systematic gene-expression shifts.
 - `E4_*_ExpressionShift.R` — Expression-shift analysis (3 scenarios)
 - `E4_*_CIBERSORTx_backfill.R` — CIBERSORTx result backfill (3 scenarios)
@@ -62,11 +62,11 @@ Full benchmark-pipeline scripts with an appended parameter-sensitivity section, 
 - `generalization_from_single_reference_hm_pancreas_parameter_sensitivity.R`
 - `cross_platform_consistency_mm_brain_parameter_sensitivity.R`
 
-### `07_plotting/` — Publication-grade plotting (12)
+### `07_plotting/` — Publication-grade plotting
 Heatmaps, violin plots, ablation/tuning/sweep plots, cell-type-extension comparisons, E4-related figures, etc.
 - Notable: `esmf-plots.R`, `plot_ablation.R`, `plot_ablation_contribution.R`, `plot_tune_esmf_heatmap.R`, `Plot_PerSample_Violin*.R`, `plot_cell_type_extension_comparison.R`, `plot_cell_type_expansion.R`, `e4_merge_cibersortx_and_plot.R`, `plot_fig4_fig5_no_stars.R`, `fix_figure3_violin_lasso_ridge.R`, `plot_esmf_sweep_2col_optima.R`
 
-### `08_environment_misc/` — Environment & miscellaneous (1)
+### `08_environment_misc/` — Environment & miscellaneous
 - `list_package_versions.R` — Records the versions of dependency packages in the runtime environment
 
 ---
