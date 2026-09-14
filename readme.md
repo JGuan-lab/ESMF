@@ -13,7 +13,7 @@ esmf_codes_organized/
 ├── 01_algorithms_and_utilities/        # Deconvolution engine & shared utilities (used by all other scripts)
 ├── 02_benchmark_scenarios/             # Benchmark drivers (3 scenario classes × multiple tissues)
 ├── 03_ablation_study/                  # Ablation study (latest versions only)
-├── 04_expression_shift_e4/             # E4 expression-shift robustness experiment
+├── 04_expression_shift_e4/             # Expression-shift robustness experiment
 ├── 05_parameter_sweep/                 # Parameter sweeps / tuning / sensitivity
 ├── 06_parameter_sensitivity/           # Parameter-sensitivity benchmark experiments
 ├── 07_plotting/                        # Publication-grade plotting scripts
@@ -45,7 +45,7 @@ Drivers for the paper's **3 scenario classes × multiple tissues** benchmark. Ea
 ### `03_ablation_study/` — Ablation study
 Module ablations (regularization, prior, literature, etc.) and parameter-sensitivity analyses for each benchmark scenario.
 
-### `04_expression_shift_e4/` — E4 expression-shift experiment
+### `04_expression_shift_e4/` — Expression-shift experiment
 Evaluates ESMF robustness under systematic gene-expression shifts.
 - `E4_*_ExpressionShift.R` — Expression-shift analysis (3 scenarios)
 - `E4_*_CIBERSORTx_backfill.R` — CIBERSORTx result backfill (3 scenarios)
