@@ -1,6 +1,7 @@
 # ESMF — Bulk RNA-seq Deconvolution
 
 ESMF corresponds to the following paper:
+
 Shuchao Li, Yunwen Mou, Bingjie Yuan, Jinting Guan*, Guoli Ji*. ESMF: Elastic Signature-based Matrix Factorization for Robust Cellular Deconvolution. BioData Mining (2026). https://doi.org/10.1186/s13040-026-00612-7
 
 **ESMF** is a deconvolution method for estimating cell-type proportions from bulk RNA-seq data using a single-cell-derived reference profile matrix. It formulates deconvolution as a non-negative matrix factorization (NMF) problem that jointly infers cell-type fractions and a refined reference signature. The method is benchmarked against a panel of bulk and single-cell deconvolution approaches.
